@@ -32,8 +32,10 @@ class HomeController extends Controller
     }
     public function mail()
     {
-        $name = 'shilpi';
-        Mail::to('shilpi.trivedi@brainvire.com')->send(new SendMailable($name));
+        $first_name = 'shilpi';
+        $last_name =  'trivedi';
+        $image     =   'img_5terre_wide.jpg';
+        Mail::to('shilpi.trivedi@brainvire.com')->send(new SendMailable($first_name,$last_name,$image));
 
         return 'Email was sent';
         return view('student');

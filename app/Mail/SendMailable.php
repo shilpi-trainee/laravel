@@ -10,16 +10,21 @@ use App\User;
 class SendMailable extends Mailable
 {
     use Queueable, SerializesModels;
-    public $name;
+    public $first_name;
+    public $last_name;
+    public $image;
+
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($name)
+    public function __construct($first_name,$last_name,$image)
     {
-        $this->name = $name;
+        $this->name = $first_name;
+        $this->name = $last_name;
+        $this->name = $image;
     }
 
     /**
