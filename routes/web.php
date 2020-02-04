@@ -27,3 +27,7 @@ Route::get('/dynamic_dependent', 'DynamicDependent@index');
 
 Route::post('dynamic_dependent/fetch', 'DynamicDependent@fetch')->name('dynamicdependent.fetch');
 Route::get('/send/email', 'HomeController@mail');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
